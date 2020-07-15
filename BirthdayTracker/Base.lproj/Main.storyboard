@@ -33,6 +33,7 @@
                     <navigationItem key="navigationItem" title="Birthdays list" id="0dk-xo-stS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mzX-Ru-Yjx">
                             <connections>
+                                <action selector="addButtonPressed:" destination="AlD-0r-M88" id="BOE-4O-XHN"/>
                                 <segue destination="0XB-Eh-Krq" kind="show" id="6RZ-2r-AMO"/>
                             </connections>
                         </barButtonItem>

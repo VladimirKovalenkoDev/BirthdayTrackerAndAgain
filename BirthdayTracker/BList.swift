@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  BList.swift
 //  BirthdayTracker
 //
 //  Created by Владимир Коваленко on 15.07.2020.
@@ -8,8 +8,9 @@
 
 import Foundation
 import RealmSwift
-class Data: Object {
- @objc  dynamic var firstName : String = ""
- @objc  dynamic  var lastName : String = ""
- @objc  dynamic var birthDate: Date = Date()
-}
+
+/*
+class BList: Object {
+    @objc dynamic var name : String = ""
+    let birthdays = List<Birthday>()
+ }*/

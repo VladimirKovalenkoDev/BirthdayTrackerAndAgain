@@ -7,14 +7,21 @@
 //
 
 import UIKit
-
+import RealmSwift
 class BirthdaysViewController: UITableViewController {
 
+    let realm = try! Realm()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        //let newBirthday = BList()
+        
+    }
+    
 }
 
