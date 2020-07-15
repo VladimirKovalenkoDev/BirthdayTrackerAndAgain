@@ -3,29 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0154F497886F59A06B51DA11 /* Pods_BirthdayTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012CDAD4D6F8801E7F9B96E7 /* Pods_BirthdayTracker.framework */; };
 		DD1E029324BF22980057C04B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E029224BF22980057C04B /* AppDelegate.swift */; };
 		DD1E029524BF22980057C04B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E029424BF22980057C04B /* SceneDelegate.swift */; };
-		DD1E029724BF22980057C04B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E029624BF22980057C04B /* ViewController.swift */; };
+		DD1E029724BF22980057C04B /* BirthdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E029624BF22980057C04B /* BirthdaysViewController.swift */; };
 		DD1E029A24BF22980057C04B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1E029824BF22980057C04B /* Main.storyboard */; };
-		DD1E029D24BF22980057C04B /* BirthdayTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD1E029B24BF22980057C04B /* BirthdayTracker.xcdatamodeld */; };
 		DD1E029F24BF229C0057C04B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1E029E24BF229C0057C04B /* Assets.xcassets */; };
 		DD1E02A224BF229C0057C04B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1E02A024BF229C0057C04B /* LaunchScreen.storyboard */; };
+		DD1E02AA24BF2AE90057C04B /* AddBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E02A924BF2AE90057C04B /* AddBirthdayViewController.swift */; };
+		DD1E02AC24BF44BA0057C04B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E02AB24BF44BA0057C04B /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		012CDAD4D6F8801E7F9B96E7 /* Pods_BirthdayTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BirthdayTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8F4B21D3C806E9FBA8613A /* Pods-BirthdayTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirthdayTracker.debug.xcconfig"; path = "Target Support Files/Pods-BirthdayTracker/Pods-BirthdayTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1E028F24BF22980057C04B /* BirthdayTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1E029224BF22980057C04B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD1E029424BF22980057C04B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD1E029624BF22980057C04B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD1E029624BF22980057C04B /* BirthdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysViewController.swift; sourceTree = "<group>"; };
 		DD1E029924BF22980057C04B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DD1E029C24BF22980057C04B /* BirthdayTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayTracker.xcdatamodel; sourceTree = "<group>"; };
 		DD1E029E24BF229C0057C04B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1E02A124BF229C0057C04B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1E02A324BF229C0057C04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD1E02A924BF2AE90057C04B /* AddBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayViewController.swift; sourceTree = "<group>"; };
+		DD1E02AB24BF44BA0057C04B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EFEDE6E11944989F861865D1 /* Pods-BirthdayTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirthdayTracker.release.xcconfig"; path = "Target Support Files/Pods-BirthdayTracker/Pods-BirthdayTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0154F497886F59A06B51DA11 /* Pods_BirthdayTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44E60284B2072AC2C4AAC9AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				012CDAD4D6F8801E7F9B96E7 /* Pods_BirthdayTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		577181BB2EF961B16D73D285 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C8F4B21D3C806E9FBA8613A /* Pods-BirthdayTracker.debug.xcconfig */,
+				EFEDE6E11944989F861865D1 /* Pods-BirthdayTracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DD1E028624BF22980057C04B = {
 			isa = PBXGroup;
 			children = (
 				DD1E029124BF22980057C04B /* BirthdayTracker */,
 				DD1E029024BF22980057C04B /* Products */,
+				577181BB2EF961B16D73D285 /* Pods */,
+				44E60284B2072AC2C4AAC9AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,13 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				DD1E029224BF22980057C04B /* AppDelegate.swift */,
+				DD1E02AB24BF44BA0057C04B /* Data.swift */,
 				DD1E029424BF22980057C04B /* SceneDelegate.swift */,
-				DD1E029624BF22980057C04B /* ViewController.swift */,
+				DD1E029624BF22980057C04B /* BirthdaysViewController.swift */,
 				DD1E029824BF22980057C04B /* Main.storyboard */,
+				DD1E02A924BF2AE90057C04B /* AddBirthdayViewController.swift */,
 				DD1E029E24BF229C0057C04B /* Assets.xcassets */,
 				DD1E02A024BF229C0057C04B /* LaunchScreen.storyboard */,
 				DD1E02A324BF229C0057C04B /* Info.plist */,
-				DD1E029B24BF22980057C04B /* BirthdayTracker.xcdatamodeld */,
 			);
 			path = BirthdayTracker;
 			sourceTree = "<group>";
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD1E02A624BF229C0057C04B /* Build configuration list for PBXNativeTarget "BirthdayTracker" */;
 			buildPhases = (
+				AB571E49929A5A6073A18089 /* [CP] Check Pods Manifest.lock */,
 				DD1E028B24BF22980057C04B /* Sources */,
 				DD1E028C24BF22980057C04B /* Frameworks */,
 				DD1E028D24BF22980057C04B /* Resources */,
+				7B51F1F3E87B4707EAB5A0ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,15 +165,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B51F1F3E87B4707EAB5A0ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BirthdayTracker/Pods-BirthdayTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BirthdayTracker/Pods-BirthdayTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BirthdayTracker/Pods-BirthdayTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB571E49929A5A6073A18089 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BirthdayTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD1E028B24BF22980057C04B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD1E029724BF22980057C04B /* ViewController.swift in Sources */,
+				DD1E029724BF22980057C04B /* BirthdaysViewController.swift in Sources */,
+				DD1E02AC24BF44BA0057C04B /* Data.swift in Sources */,
+				DD1E02AA24BF2AE90057C04B /* AddBirthdayViewController.swift in Sources */,
 				DD1E029324BF22980057C04B /* AppDelegate.swift in Sources */,
 				DD1E029524BF22980057C04B /* SceneDelegate.swift in Sources */,
-				DD1E029D24BF22980057C04B /* BirthdayTracker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +358,7 @@
 		};
 		DD1E02A724BF229C0057C04B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C8F4B21D3C806E9FBA8613A /* Pods-BirthdayTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +377,7 @@
 		};
 		DD1E02A824BF229C0057C04B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEDE6E11944989F861865D1 /* Pods-BirthdayTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,19 +416,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DD1E029B24BF22980057C04B /* BirthdayTracker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DD1E029C24BF22980057C04B /* BirthdayTracker.xcdatamodel */,
-			);
-			currentVersion = DD1E029C24BF22980057C04B /* BirthdayTracker.xcdatamodel */;
-			path = BirthdayTracker.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DD1E028724BF22980057C04B /* Project object */;
 }
