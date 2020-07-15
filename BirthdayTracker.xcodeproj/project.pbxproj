@@ -16,7 +16,6 @@
 		DD1E02A224BF229C0057C04B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1E02A024BF229C0057C04B /* LaunchScreen.storyboard */; };
 		DD1E02AA24BF2AE90057C04B /* AddBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E02A924BF2AE90057C04B /* AddBirthdayViewController.swift */; };
 		DD44B06924BF511F00F0DBE4 /* Birthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44B06824BF511F00F0DBE4 /* Birthday.swift */; };
-		DD44B06B24BF531000F0DBE4 /* BList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44B06A24BF531000F0DBE4 /* BList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		DD1E02A324BF229C0057C04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1E02A924BF2AE90057C04B /* AddBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayViewController.swift; sourceTree = "<group>"; };
 		DD44B06824BF511F00F0DBE4 /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
-		DD44B06A24BF531000F0DBE4 /* BList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BList.swift; sourceTree = "<group>"; };
 		EFEDE6E11944989F861865D1 /* Pods-BirthdayTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirthdayTracker.release.xcconfig"; path = "Target Support Files/Pods-BirthdayTracker/Pods-BirthdayTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +93,6 @@
 				DD1E02A024BF229C0057C04B /* LaunchScreen.storyboard */,
 				DD1E02A324BF229C0057C04B /* Info.plist */,
 				DD44B06824BF511F00F0DBE4 /* Birthday.swift */,
-				DD44B06A24BF531000F0DBE4 /* BList.swift */,
 			);
 			path = BirthdayTracker;
 			sourceTree = "<group>";
@@ -219,7 +216,6 @@
 				DD1E029724BF22980057C04B /* BirthdaysViewController.swift in Sources */,
 				DD1E02AA24BF2AE90057C04B /* AddBirthdayViewController.swift in Sources */,
 				DD1E029324BF22980057C04B /* AppDelegate.swift in Sources */,
-				DD44B06B24BF531000F0DBE4 /* BList.swift in Sources */,
 				DD1E029524BF22980057C04B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
