@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
+
 class AddBirthdayViewController: UIViewController {
   let realm = try! Realm()
     
@@ -20,7 +22,7 @@ class AddBirthdayViewController: UIViewController {
 
         birthdatePicker.maximumDate = Date()
     }
-    
+// MARK: - Save Methods
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
                let firstName  = firstNameTextField.text ?? "FirstName PlaceHolder"
                let lastName = lastNametextField.text ?? "LastName PlaceHolder"
@@ -29,30 +31,29 @@ class AddBirthdayViewController: UIViewController {
         birthday.firstName = firstName
         birthday.lastName = lastName
         birthday.birthDate = birthdate
+        birthday.birthdayId = UUID().uuidString
+        print(birthdate)
                     do{
                           try realm.write{
                               realm.add(birthday)
-                            print("DONE")
+                            let message = "Today \(firstName) \(lastName) birthday! Say some nice words🎈"
+                            let content = UNMutableNotificationContent()
+                            content.body = message
+                            content.sound = UNNotificationSound.default
+                            var dateComponents = Calendar.current.dateComponents([.month, .day], from: birthdate)
+                            dateComponents.hour = 8
+                            
+                            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                            if let identifier = birthday.birthdayId {
+                                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                                let center = UNUserNotificationCenter.current()
+                                center.add(request, withCompletionHandler: nil)
+                            }
                           }
                       }catch{
                           print("error creating item")
                       }
          dismiss(animated: true, completion: nil)
                }
-           /*
-       
-    }
-    
-  
-       
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    
+           
 }

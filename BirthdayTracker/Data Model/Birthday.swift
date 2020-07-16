@@ -11,8 +11,9 @@ import RealmSwift
 
 
 class Birthday : Object{
+    
     @objc  dynamic var firstName : String = ""
     @objc  dynamic var lastName : String = ""
     @objc  dynamic var birthDate: Date = Date()
-   // var parentCategory = LinkingObjects(fromType: BList.self, property: "birthdays")
+    @objc  dynamic var birthdayId : String? = ""
 }
