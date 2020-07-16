@@ -19,7 +19,8 @@ class AddBirthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.firstNameTextField.delegate = self
+        self.lastNametextField.delegate = self
         birthdatePicker.maximumDate = Date()
     }
 // MARK: - Save Methods
@@ -56,4 +57,15 @@ class AddBirthdayViewController: UIViewController {
          dismiss(animated: true, completion: nil)
                }
            
+}
+// MARK: - Text Field Delegate methods
+extension AddBirthdayViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameTextField.endEditing(true)
+        lastNametextField.endEditing(true)
+        return true
+    }
+    
+    
 }
