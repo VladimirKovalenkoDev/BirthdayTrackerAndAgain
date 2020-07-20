@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QYk-zC-6jQ">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,20 +11,20 @@
         <scene sceneID="jfy-Xy-SKx">
             <objects>
                 <tableViewController id="AlD-0r-M88" customClass="BirthdaysViewController" customModule="BirthdayTracker" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YK2-OW-u3Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YK2-OW-u3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="NJT-2Z-CUK" detailTextLabel="dHc-jj-iX4" style="IBUITableViewCellStyleSubtitle" id="Zee-e5-wgc">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zee-e5-wgc" id="XsK-WG-8AF">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NJT-2Z-CUK">
-                                            <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
+                                            <rect key="frame" x="20.000000000000004" y="9.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -34,22 +34,23 @@
                                             <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="AlD-0r-M88" id="wZq-ox-Tl1"/>
                             <outlet property="delegate" destination="AlD-0r-M88" id="pI5-wG-NwN"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Birthdays list" id="0dk-xo-stS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mzX-Ru-Yjx">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.square" catalog="system" id="mzX-Ru-Yjx">
                             <connections>
-                                <segue destination="0XB-Eh-Krq" kind="show" id="6RZ-2r-AMO"/>
+                                <segue destination="0XB-Eh-Krq" kind="presentation" modalPresentationStyle="fullScreen" id="bIs-0D-Ejh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -63,20 +64,11 @@
             <objects>
                 <viewController id="0XB-Eh-Krq" customClass="AddBirthdayViewController" customModule="BirthdayTracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Szv-UQ-N4R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-12-6S7">
-                                <rect key="frame" x="20" y="100" width="139" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="afb-Xt-tIQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b0-JZ-7PS">
-                                <rect key="frame" x="20" y="170" width="139" height="21"/>
+                                <rect key="frame" x="20" y="166" width="139" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NXS-eq-BtT"/>
                                 </constraints>
@@ -85,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BirthDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfH-NR-FHe">
-                                <rect key="frame" x="20" y="250" width="139" height="21"/>
+                                <rect key="frame" x="20" y="252" width="139" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Agv-Lf-IgR"/>
                                 </constraints>
@@ -94,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMU-eZ-r4H">
-                                <rect key="frame" x="20" y="130" width="335" height="34"/>
+                                <rect key="frame" x="20" y="126" width="335" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="dnE-4G-RU2"/>
                                 </constraints>
@@ -102,7 +94,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ZP-gw-ao7">
-                                <rect key="frame" x="20" y="200" width="335" height="34"/>
+                                <rect key="frame" x="20" y="195" width="335" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="uml-93-pyl"/>
                                 </constraints>
@@ -110,44 +102,80 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-Ss-RzT">
-                                <rect key="frame" x="0.0" y="280" width="414" height="264"/>
+                                <rect key="frame" x="0.0" y="282" width="414" height="136"/>
                                 <date key="date" timeIntervalSinceReferenceDate="616507310.06776404">
                                     <!--2020-07-15 12:01:50 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9A-B6-Cfo">
+                                <rect key="frame" x="57" y="555" width="300" height="42"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="0XB-Eh-Krq" eventType="touchUpInside" id="eey-Q0-uEt"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ylh-w8-6xh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.80000000000000004" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add Birthday" id="WHc-rH-YTy">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="clear" catalog="system" id="1Wa-nJ-wNp">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="0XB-Eh-Krq" id="kCl-49-ymd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-12-6S7">
+                                <rect key="frame" x="20" y="97" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="afb-Xt-tIQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aa9-12-6S7" firstAttribute="leading" secondItem="3hd-4S-iuF" secondAttribute="leading" constant="20" id="3Fo-yl-z3u"/>
                             <constraint firstItem="8b0-JZ-7PS" firstAttribute="leading" secondItem="jfH-NR-FHe" secondAttribute="leading" id="3h9-W5-lLh"/>
+                            <constraint firstItem="3hd-4S-iuF" firstAttribute="bottom" secondItem="y9A-B6-Cfo" secondAttribute="bottom" constant="139" id="7Cf-NN-iGB"/>
                             <constraint firstItem="8b0-JZ-7PS" firstAttribute="trailing" secondItem="jfH-NR-FHe" secondAttribute="trailing" id="8sy-Ie-6Iv"/>
                             <constraint firstItem="3hd-4S-iuF" firstAttribute="trailing" secondItem="aa9-12-6S7" secondAttribute="trailing" constant="255" id="AVu-3c-bSc"/>
                             <constraint firstItem="Gcb-Ss-RzT" firstAttribute="top" secondItem="jfH-NR-FHe" secondAttribute="bottom" constant="9" id="CVY-BN-Awi"/>
-                            <constraint firstItem="5ZP-gw-ao7" firstAttribute="top" secondItem="8b0-JZ-7PS" secondAttribute="bottom" constant="9" id="IEJ-Wt-YwY"/>
+                            <constraint firstItem="5ZP-gw-ao7" firstAttribute="top" secondItem="8b0-JZ-7PS" secondAttribute="bottom" constant="8" id="IEJ-Wt-YwY"/>
                             <constraint firstItem="8b0-JZ-7PS" firstAttribute="top" secondItem="mMU-eZ-r4H" secondAttribute="bottom" constant="6" id="ODt-aG-89Z"/>
                             <constraint firstItem="mMU-eZ-r4H" firstAttribute="leading" secondItem="5ZP-gw-ao7" secondAttribute="leading" id="SaP-u6-Y7v"/>
                             <constraint firstItem="aa9-12-6S7" firstAttribute="leading" secondItem="8b0-JZ-7PS" secondAttribute="leading" id="Szk-Gl-QGh"/>
                             <constraint firstItem="mMU-eZ-r4H" firstAttribute="leading" secondItem="Szv-UQ-N4R" secondAttribute="leadingMargin" id="d8v-CG-F3a"/>
                             <constraint firstItem="mMU-eZ-r4H" firstAttribute="trailing" secondItem="5ZP-gw-ao7" secondAttribute="trailing" id="eUQ-Ic-XXx"/>
                             <constraint firstItem="aa9-12-6S7" firstAttribute="trailing" secondItem="8b0-JZ-7PS" secondAttribute="trailing" id="epN-2M-uf5"/>
-                            <constraint firstItem="jfH-NR-FHe" firstAttribute="top" secondItem="5ZP-gw-ao7" secondAttribute="bottom" constant="16" id="kmm-xl-ZnJ"/>
+                            <constraint firstItem="jfH-NR-FHe" firstAttribute="top" secondItem="5ZP-gw-ao7" secondAttribute="bottom" constant="23" id="kmm-xl-ZnJ"/>
                             <constraint firstItem="Gcb-Ss-RzT" firstAttribute="leading" secondItem="3hd-4S-iuF" secondAttribute="leading" id="lA7-Yu-Coy"/>
+                            <constraint firstItem="y9A-B6-Cfo" firstAttribute="leading" secondItem="3hd-4S-iuF" secondAttribute="leading" constant="57" id="lgK-CX-q32"/>
                             <constraint firstItem="Gcb-Ss-RzT" firstAttribute="centerX" secondItem="Szv-UQ-N4R" secondAttribute="centerX" id="pSe-wj-VyP"/>
                             <constraint firstItem="3hd-4S-iuF" firstAttribute="bottom" secondItem="Gcb-Ss-RzT" secondAttribute="bottom" constant="318" id="qgH-Ur-cBm"/>
-                            <constraint firstItem="aa9-12-6S7" firstAttribute="top" secondItem="3hd-4S-iuF" secondAttribute="top" constant="12" id="sjt-6M-Z8I"/>
+                            <constraint firstItem="y9A-B6-Cfo" firstAttribute="centerX" secondItem="Gcb-Ss-RzT" secondAttribute="centerX" id="rFR-5j-POV"/>
+                            <constraint firstItem="aa9-12-6S7" firstAttribute="top" secondItem="3hd-4S-iuF" secondAttribute="top" constant="97" id="sjt-6M-Z8I"/>
                             <constraint firstItem="3hd-4S-iuF" firstAttribute="trailing" secondItem="mMU-eZ-r4H" secondAttribute="trailing" constant="59" id="tPw-c2-697"/>
-                            <constraint firstItem="mMU-eZ-r4H" firstAttribute="top" secondItem="aa9-12-6S7" secondAttribute="bottom" constant="9" id="x2x-yc-db7"/>
+                            <constraint firstItem="mMU-eZ-r4H" firstAttribute="top" secondItem="aa9-12-6S7" secondAttribute="bottom" constant="8" id="x2x-yc-db7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3hd-4S-iuF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Birthday" id="WoL-ld-nm7">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="zXv-kX-Vm1">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="0XB-Eh-Krq" id="dkO-b8-ood"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add Birthday" id="WoL-ld-nm7"/>
                     <connections>
+                        <outlet property="addButton" destination="y9A-B6-Cfo" id="kIM-EY-Le5"/>
                         <outlet property="birthdatePicker" destination="Gcb-Ss-RzT" id="ycX-vo-YHM"/>
                         <outlet property="firstNameTextField" destination="mMU-eZ-r4H" id="ajd-yw-dxy"/>
                         <outlet property="lastNametextField" destination="5ZP-gw-ao7" id="urc-dQ-XLR"/>
@@ -155,17 +183,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErX-S7-N3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800.0000000000002" y="179.46428571428569"/>
+            <point key="canvasLocation" x="1745" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tls-CT-Dy9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QYk-zC-6jQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U9e-my-Mgt">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="U9e-my-Mgt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.4760480523109436" green="0.81999927759170532" blue="0.82427281141281128" alpha="0.99993896484375" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.80000000000000004" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -177,4 +205,8 @@
             <point key="canvasLocation" x="-10.144927536231885" y="179.46428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clear" catalog="system" width="64" height="56"/>
+        <image name="plus.square" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

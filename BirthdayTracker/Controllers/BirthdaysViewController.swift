@@ -26,6 +26,7 @@ class BirthdaysViewController: UITableViewController {
         super.viewDidLoad()
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
+        tableView.reloadData()
     }
 
     
@@ -42,7 +43,7 @@ class BirthdaysViewController: UITableViewController {
         let birthday = birthdays?[indexPath.row]
         let firstName = birthday?.firstName
         let lastName  = birthday?.lastName
-        cell.textLabel?.text = firstName! + "" + lastName!
+        cell.textLabel?.text = firstName! + " " + lastName!
 
         if let date = birthday?.birthDate {
             cell.detailTextLabel?.text = dateFormatter.string(from: date)

@@ -10,25 +10,32 @@ import UIKit
 import RealmSwift
 import UserNotifications
 
-class AddBirthdayViewController: UIViewController {
+class AddBirthdayViewController: UIViewController  {
   let realm = try! Realm()
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNametextField: UITextField!
     @IBOutlet weak var birthdatePicker: UIDatePicker!
     
+    @IBOutlet weak var addButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.firstNameTextField.delegate = self
         self.lastNametextField.delegate = self
         birthdatePicker.maximumDate = Date()
+        addButton.layer.cornerRadius = 5
     }
-// MARK: - Save Methods
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+   
+    
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    // MARK: - Save Methods
+    @IBAction func saveButtonPressed(_ sender: UIButton!) {
                let firstName  = firstNameTextField.text ?? "FirstName PlaceHolder"
                let lastName = lastNametextField.text ?? "LastName PlaceHolder"
                let birthdate = birthdatePicker.date
-                let birthday = Birthday()
+               let birthday = Birthday()
         birthday.firstName = firstName
         birthday.lastName = lastName
         birthday.birthDate = birthdate
@@ -55,9 +62,10 @@ class AddBirthdayViewController: UIViewController {
                           print("error creating item")
                       }
          dismiss(animated: true, completion: nil)
+        
                }
-           
 }
+
 // MARK: - Text Field Delegate methods
 extension AddBirthdayViewController: UITextFieldDelegate {
     
